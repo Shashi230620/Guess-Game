@@ -74,7 +74,7 @@ p{
 #btn1,#btn2{
     width:10%;
     height:40%;
-    background-color: rgb(2, 74, 102);
+    /* background-color: rgb(2, 74, 102); */
     color:black;
     margin-top: 3%;
     border-radius: 10px;
@@ -82,10 +82,11 @@ p{
     font-family: "Titillium Web", sans-serif;
   font-weight: 400;
   font-style: normal;
+  overflow: hidden;
 
 }
 #btn1:hover,#btn2:hover{
-    background-color: rgb(2, 74, 102);
+    /* background-color: rgb(2, 74, 102); */
     color: white;
     width:11%;
     height:45%;
@@ -104,6 +105,7 @@ p{
     width: 100%;
     height:100%;
     text-align: center;
+    /* background-color: red; */
 }
 #p{
     line-height: 30vh;
@@ -111,4 +113,89 @@ p{
     font-family: "Jersey 25 Charted", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+@media screen and (max-width:660px) {
+    body{
+        width:100vw;
+        height:100vh;
+    }
+    .main_Coinatainer{
+        width:100%;
+        height:100%;
+        background-size: cover;
+        background-image: url("https://as1.ftcdn.net/v2/jpg/04/34/94/90/1000_F_434949006_MtUycXdKs8P4Qg6ElGkuP9UdsEX012YE.jpg");
+    
+    }
+    .header{
+        width:100%;
+        height:13%;
+   
+    }
+    h1{
+        padding-top: 8%;
+    }
+    .inputs{
+        width:100%;
+        height:45%;
+        /* background-color: chartreuse; */
+    }
+    .flex{
+        width:100%;
+        height:100%;
+        /* background-color: yellow; */
+        margin-left: 0%;
+        display: flex;
+        gap: 5%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #inp,#inp1{
+        width:60%;
+        height: 10%;
+        font-size: 4rem;
+        color:skyblue;
+        text-align: center;
+    }
+    .buttons{
+        width:100%;
+        height:20%;
+        /* background-color: chocolate; */
+        text-align: center;
+    }
+    #btn1,#btn2{
+        width:23%;
+        height:30%;
+        /* background-color: rgb(2, 74, 102); */
+        color:black;
+        margin-top: 3%;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        font-family: "Titillium Web", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      overflow: hidden;
+    
+    }
+    .result{
+        width:100%;
+        height: 22%;
+        /* background-color: crimson; */
+        /* text-align: center; */
+    }
+    .res{
+        width: 100%;
+        height:100%;
+        /* text-align: center; */
+    }
+    #btn1:hover,#btn2:hover{
+        /* background-color: rgb(2, 74, 102); */
+        color: white;
+        width:25%;
+        height:35%;
+        cursor: pointer;
+    }
+    #p{
+        font-size: 1.6rem;
+        line-height: 1vh;
+    }
 }
