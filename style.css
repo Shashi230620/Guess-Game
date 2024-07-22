@@ -1,0 +1,232 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+}
+.main_Coinatainer{
+    width:100%;
+    height:100%;
+    z-index: -1;
+    /* background-color: black; */
+    background-size: cover;
+    background-image: url("https://as1.ftcdn.net/v2/jpg/04/34/94/90/1000_F_434949006_MtUycXdKs8P4Qg6ElGkuP9UdsEX012YE.jpg");
+
+}
+.header{
+    width:100%;
+    height:10%;
+    /* background-color: red; */
+    text-align: center;
+    z-index: 0;
+}
+h1{
+    font-size: 2em;
+    padding-top: 0.5%;
+    color:white;
+    font-family: "Jersey 25 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.inputs{
+    width:100%;
+    height:40%;
+    z-index: 0;
+    /* background-color: chartreuse; */
+}
+#inp,#inp1{
+    width:50%;
+    height: 10%;
+    font-size: 4rem;
+    color:skyblue;
+    text-align: center;
+}
+.flex1{
+    margin-left:5%;
+    z-index: 2;
+}
+#inp{
+    margin-left: 30%;
+}
+.flex{
+    width:40%;
+    height:100%;
+    /* background-color: yellow; */
+    margin-left: 30%;
+    display: flex;
+    gap: 5%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+p{
+    font-size: 3rem;
+}
+.buttons{
+    width:100%;
+    height:20%;
+    /* background-color: chocolate; */
+    text-align: center;
+    z-index: 0;
+}
+.btn{
+    width:100%;
+    height:100%;
+    z-index: 1;
+    /* background-color: cornflowerblue; */
+}
+#btn1,#btn2{
+    width:10%;
+    height:40%;
+    /* background-color: rgb(2, 74, 102); */
+    color:black;
+    margin-top: 3%;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow: hidden;
+
+}
+#btn1:hover,#btn2:hover{
+    /* background-color: rgb(2, 74, 102); */
+    color: black;
+    width:11%;
+    height:45%;
+    cursor: pointer;
+}
+#btn2{
+    margin-left: 5%;
+}
+.result{
+    width:100%;
+    height: 30%;
+    /* background-color: crimson; */
+    text-align: center;
+    z-index: 0;
+}
+.res{
+    width: 100%;
+    height:100%;
+    text-align: center;
+    /* background-color: red; */
+    z-index: 1;
+}
+#p{
+    line-height: 30vh;
+    color:white;
+    font-family: "Jersey 25 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#score {
+    width: 60%;
+    height: 50vmin;
+    background-color: antiquewhite;
+    z-index: 10; 
+    color: black;
+    margin: 0 auto; 
+    border-radius: 30px;
+    position: absolute;
+    top: 45%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #scoreheading {
+    text-align: center;
+    color: black;
+    padding-top: 10%;
+    font-size: 5rem;
+  }
+  
+@media screen and (max-width:660px) {
+    body{
+        width:100vw;
+        height:100vh;
+    }
+    .main_Coinatainer{
+        width:100%;
+        height:100%;
+        background-size: cover;
+        background-image: url("https://as1.ftcdn.net/v2/jpg/04/34/94/90/1000_F_434949006_MtUycXdKs8P4Qg6ElGkuP9UdsEX012YE.jpg");
+    
+    }
+    .header{
+        width:100%;
+        height:13%;
+   
+    }
+    h1{
+        padding-top: 8%;
+    }
+    .inputs{
+        width:100%;
+        height:45%;
+        /* background-color: chartreuse; */
+    }
+    .flex{
+        width:100%;
+        height:100%;
+        /* background-color: yellow; */
+        margin-left: 0%;
+        display: flex;
+        gap: 5%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #inp,#inp1{
+        width:60%;
+        height: 10%;
+        font-size: 4rem;
+        color:skyblue;
+        text-align: center;
+    }
+    .buttons{
+        width:100%;
+        height:20%;
+        /* background-color: chocolate; */
+        text-align: center;
+    }
+    #btn1,#btn2{
+        width:23%;
+        height:30%;
+        /* background-color: rgb(2, 74, 102); */
+        color:black;
+        margin-top: 3%;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        font-family: "Titillium Web", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      overflow: hidden;
+    
+    }
+    .result{
+        width:100%;
+        height: 22%;
+        /* background-color: crimson; */
+        /* text-align: center; */
+    }
+    .res{
+        width: 100%;
+        height:100%;
+        /* text-align: center; */
+    }
+    #btn1:hover,#btn2:hover{
+        /* background-color: rgb(2, 74, 102); */
+        color: white;
+        width:25%;
+        height:35%;
+        cursor: pointer;
+    }
+    #p{
+        font-size: 1.8rem;
+        line-height: 2vh;
+    }
+}
