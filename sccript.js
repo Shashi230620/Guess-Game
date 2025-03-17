@@ -22,6 +22,8 @@ function guess() {
   console.error("{dont Enter value greater than 10}");
   
   const random = Math.floor(Math.random() * 10) + 1;
+  document.getElementById("inp1").value = random;  // Set the random number in inp1
+  
   const input = document.getElementById("inp").value;
   const inpt1 = parseInt(input);
 
@@ -34,7 +36,7 @@ function guess() {
     alert("ERROR! INSERT VALUES");
     document.getElementById("inp1").value = "";
     return;
-  } 
+  }
 
   if (inpt1 === random) {
     displayResult(image2);
