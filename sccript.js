@@ -1,12 +1,15 @@
 const div1 = document.querySelector(".inputs");
-const image1 = document.createElement("img");
-image1.src = "asserts/slightly-frowning-face.svg"
-image1.style.width = "20%"; 
-const image2 = document.createElement("img");
-image2.src = "asserts/sports-medal.svg"
-image2.style.width = "20%"; 
+const image1 = createImage("asserts/slightly-frowning-face.svg");
+const image2 = createImage("asserts/sports-medal.svg");
 
 let chance = 0;
+
+function createImage(src) {
+  const img = document.createElement("img");
+  img.src = src;
+  img.style.width = "20%";
+  return img;
+}
 
 function restart() {
   document.getElementById("inp").value = "";
@@ -19,40 +22,35 @@ function guess() {
   console.error("{dont Enter value greater than 10}");
   
   const random = Math.floor(Math.random() * 10) + 1;
-  const getnumber = random;
-  document.getElementById("inp1").value = getnumber;
   const input = document.getElementById("inp").value;
   const inpt1 = parseInt(input);
 
   if (chance === 2) {
-    const div = document.createElement('div');
-    const h1 = document.createElement("h1");
-    div.setAttribute("id", "score");
-    h1.setAttribute("id", "scoreheading");
-    div1.appendChild(div);
-    div.appendChild(h1);
-    h1.appendChild(image1);
+    displayResult(image1);
     return;
   }
 
-  if (input === "") {
+  if (!input) {
     alert("ERROR! INSERT VALUES");
     document.getElementById("inp1").value = "";
     return;
-  } else if (getnumber === inpt1) {
-    const div = document.createElement('div');
-    const h1 = document.createElement("h1");
-    div.setAttribute("id", "score");
-    h1.setAttribute("id", "scoreheading");
-    div1.appendChild(div);
-    div.appendChild(h1);
-   h1.appendChild(image2)
+  } 
+
+  if (inpt1 === random) {
+    displayResult(image2);
     chance += 1;
-  } else if (getnumber > inpt1) {
-    document.getElementById("p").innerHTML = "Your guess is smaller than the number";
-    chance += 1;
-  } else if (getnumber < inpt1) {
-    document.getElementById("p").innerHTML = "Your guess is bigger than the number";
+  } else {
+    document.getElementById("p").innerHTML = inpt1 < random ? "Your guess is smaller than the number" : "Your guess is bigger than the number";
     chance += 1;
   }
+}
+
+function displayResult(image) {
+  const div = document.createElement('div');
+  const h1 = document.createElement("h1");
+  div.setAttribute("id", "score");
+  h1.setAttribute("id", "scoreheading");
+  div1.appendChild(div);
+  div.appendChild(h1);
+  h1.appendChild(image);
 }
